@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title_layout %}  {% endblock %title_layout %}</title>
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> {% endcomment %}
+{% block extra_head_layout %} {% endblock extra_head_layout %}
+{% comment %} 
+<style type="text/tailwindcss">
+    @theme {--mi-color: #da373d;}
+</style> 
+{% endcomment %}
+    {%block extra_head_layuot %} {% endblock %extra_head_layuot %}
+</head>
+<body>
+    {%block content_layout%} {% endblock %content_layout %}
+    {% block footer_layout %} {% endblock %footer_layout %}
+</body>
+</html>

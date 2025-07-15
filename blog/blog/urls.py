@@ -21,8 +21,9 @@ from blog.views import IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', IndexView.as_view(), name='home')
+    path('', IndexView.as_view(), name='home'),
     path('', include('apps.user.urls', namespace='user')),
+    path('', include('apps.post.urls', namespace='post')),
 ]
 
 if settings.DEBUG:
